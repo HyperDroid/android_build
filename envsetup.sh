@@ -58,12 +58,12 @@ function check_product()
         return
     fi
 
-    if (echo -n $1 | grep -q -e "^slim_") ; then
-       SLIM_BUILD=$(echo -n $1 | sed -e 's/^slim_//g')
+    if (echo -n $1 | grep -q -e "^aoxp_") ; then
+       AOXP_BUILD=$(echo -n $1 | sed -e 's/^aoxp_//g')
     else
-       SLIM_BUILD=
+       AOXP_BUILD=
     fi
-    export SLIM_BUILD
+    export AOXP_BUILD
 
     CALLED_FROM_SETUP=true BUILD_SYSTEM=build/core \
         TARGET_PRODUCT=$1 \
